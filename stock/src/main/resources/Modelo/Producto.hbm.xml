@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02/12/2017 15:20:36 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Producto" table="producto" catalog="mi_stock" optimistic-lock="version">
+        <id name="idProducto" type="int">
+            <column name="id_producto" />
+            <generator class="assigned" />
+        </id>
+        <property name="nomProducto" type="string">
+            <column name="nom_producto" length="45" />
+        </property>
+        <property name="cantProducto" type="java.lang.Integer">
+            <column name="cant_producto" />
+        </property>
+        <property name="precio" type="java.lang.Double">
+            <column name="precio" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
